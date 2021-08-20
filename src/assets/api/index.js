@@ -1,5 +1,4 @@
-// const baseURL = "https://aviyel.herokuapp.com/"
-const baseURL = "http://localhost:9999/";
+const baseURL = "https://aviyel.herokuapp.com/"
 
 const getAllInvoices = () => {
   return fetch(`${baseURL}getAllInvoices`).then((res) => res.json());

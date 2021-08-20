@@ -1,0 +1,35 @@
+@import "../../assets/styles/variables.scss";
+.invoice-container {
+  background-color: $white;
+  width: 100%;
+  box-shadow: 0 0 4px 4px rgba(200, 200, 200, 0.1);
+  border-radius: 4px;
+  padding: 24px 3.5rem;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    border-bottom: 1px solid $light-gray;
+    .customer-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .ant-btn {
+        height: 45px;
+        border-radius: 4px;
+        border-color: $light-blue;
+        color: $light-blue;
+      }
+    }
+  }
+  .body {
+    .empty-placeholder {
+      margin-top: 32px;
+    }
+    .invoice-list {
+    }
+  }
+  .footer {
+    display: flex;
+  }
+}

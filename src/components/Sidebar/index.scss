@@ -1,0 +1,78 @@
+@import "../../assets/styles/variables.scss";
+.sidebar {
+  width: 20vw;
+  min-width: 350px;
+  height: calc(100vh - 80px);
+  background-color: $bg-dark-blue;
+  //   overflow: hidden;
+  .sidebar-content {
+    overflow-y: auto;
+    height: calc(100vh - 80px);
+    .search-bar-container {
+      padding: 0 12px;
+      .search-bar {
+        background: $bg-dark-blue2 !important;
+        margin-top: 1rem;
+        border-radius: 50px;
+        border-color: transparent !important;
+        height: 50px;
+        &:focus {
+          border: 1px solid $light-gray !important;
+          box-shadow: none !important;
+        }
+        input {
+          background: transparent !important;
+          color: $light-gray !important;
+          &::placeholder {
+            color: $light-gray !important;
+          }
+        }
+        .ant-input-clear-icon {
+          color: $light-gray !important;
+        }
+        .ant-input-prefix {
+          margin-right: 16px !important;
+        }
+      }
+    }
+    .invoice-heading {
+      margin: 24px 16px 6px 16px;
+      font-size: 14px;
+      color: $light-gray;
+      font-weight: 600;
+    }
+    .invoice-list {
+      .invoice-item {
+        padding: 12px 18px 2px 18px;
+        border-bottom: 1px solid $light-gray;
+        cursor: pointer;
+        &.active {
+          background: $bg-dark-blue1 !important;
+          p {
+            &:not(.admin-name) {
+              color: $white !important;
+            }
+          }
+        }
+        .row1,
+        .row2,
+        .row3 {
+          display: flex;
+          justify-content: space-between;
+          p,
+          span {
+            color: $light-gray;
+          }
+          .total-items {
+            font-size: 14px;
+            margin: 0 !important;
+          }
+          .admin-name {
+            font-size: 14px;
+            color: $light-blue;
+          }
+        }
+      }
+    }
+  }
+}

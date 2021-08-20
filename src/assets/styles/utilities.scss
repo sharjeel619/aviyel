@@ -1,0 +1,82 @@
+@import "./variables.scss", "./mixins.scss", "./bootstrap-utilities.css";
+.text-blue {
+  color: $light-blue !important;
+}
+.text-light-gray {
+  color: $light-gray !important;
+}
+.text-bold {
+  font-weight: bold !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.float-right {
+  float: right;
+}
+.d-inline {
+  display: inline;
+}
+.bg-gray {
+  background: $bg-gray;
+}
+.text-red {
+  color: red;
+}
+.text-white {
+  color: #fff !important;
+}
+.w-150 {
+  width: 150px !important;
+}
+.ant-table {
+  thead {
+    tr {
+      th {
+        background-color: transparent !important;
+        border-color: $light-gray;
+        &::before {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+.ant-modal-footer {
+  background: $bg-gray !important;
+  padding: 20px 16px !important;
+}
+.ant-empty {
+  display: none !important;
+}
+.pointer {
+  cursor: pointer;
+}
+$spaceamounts: (
+  0,
+  5,
+  10,
+  15,
+  20,
+  25,
+  30,
+  35,
+  40,
+  45,
+  50,
+  75,
+  100
+); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}

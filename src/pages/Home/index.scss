@@ -1,0 +1,18 @@
+@import "../../assets/styles/variables.scss";
+.home {
+  .main-container {
+    display: flex;
+    .right-content {
+      margin: 0 2rem;
+      width: 100%;
+      .header-title {
+        text-transform: uppercase;
+        color: $light-gray;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+      }
+    }
+  }
+}
